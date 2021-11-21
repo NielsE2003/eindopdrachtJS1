@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+
+		let datum = new Date();
+		let dag = datum.getDay();
+		let dagBenamingen = [ "zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"];
+		//for(let i = 0; i < 7; i++){
+			if(dag > 0 && dag < 6){
+			document.write(`<p>Vandaag is "${dagBenamingen[dag]}"</p>`);
+			document.write(`<p>Het is een werkdag, aan de slag dus.<p>`);
+			}
+			else{
+			document.write(`<p>Vandaag is "${dagBenamingen[dag]}"</p>`);
+			document.write(`<p>Het is een weekend, even bekomen.<p>`);
+			}
+			/*else{
+			document.write(`<p>Vandaag is "${dagBenamingen[i]}"</p>`);
+			document.write(`<p>Het is een weekend, even bekomen.<p>`);
+			}*/
+		//}
+
+		/*if(dag == 1){
+			document.write(`<p>Vandaag is "${dagBenamingen[0]}"</p>`);
+			document.write(`<p>Het is een werkdag, aan de slag dus.<p>`);
+		}
+		else if(dag == 2){
+			document.write(`<p>Vandaag is "${dagBenamingen[1]}"</p>`);
+			document.write(`<p>Het is een werkdag, aan de slag dus.<p>`);
+		}
+		else if(dag == 3){
+			document.write(`<p>Vandaag is "${dagBenamingen[2]}"</p>`);
+			document.write(`<p>Het is een werkdag, aan de slag dus.<p>`);
+		}
+		else if(dag == 4){
+			document.write(`<p>Vandaag is "${dagBenamingen[3]}"</p>`);
+			document.write(`<p>Het is een werkdag, aan de slag dus.<p>`);
+		}
+		else if(dag == 5){
+			document.write(`<p>Vandaag is "${dagBenamingen[4]}"</p>`);
+			document.write(`<p>Het is een werkdag, aan de slag dus.<p>`);
+		}*/
+
+	</script>
+</body>
+</html>

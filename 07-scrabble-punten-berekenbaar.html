@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+
+		let alfabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+		let alfabetScore = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10];
+		document.write("<h1>Scrabble punten berekenaar</h1>");
+		let vraagWoord = prompt("Voor welk woord wil je de score berekenen?");
+		for (let i=0; i<vraagWoord.length; i++) {
+			let n = vraagWoord.charCodeAt(i) - 65;
+			if (n<0 || n>25) continue;
+			let score = alfabetScore[n];
+		}
+		document.write(`${score}`);
+
+	</script>
+</body>
+</html>

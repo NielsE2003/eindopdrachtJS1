@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<button onclick="controleCF()">Van C naar F</button>
+	<button onclick="controleFC()">Van F naar C</button>
+	<script type="text/javascript">
+		"use strict";
+
+		let controleCF =  function (cfArgument){
+			let cf = prompt("Hoeveel graden wilt u omzetten van Celsius naar Fahrenheit?");
+			alert((`${cf}`*9)/5+32);
+			if(cf == null){
+				document.write("U hebt geannuleerd.");
+			}
+			else if(cf == 0){
+				document.write("U hebt niets ingevuld.");
+			}
+			else if(isNaN(cf) == true){
+				document.write("Dit is geen getal.");
+			}
+			else{
+				return true;
+			}
+		}
+
+		let controleFC =  function (fcArgument){
+			let fc = prompt("Hoeveel graden wilt u omzetten van Fahrenheit naar Celsius?");
+			alert(((`${fc}`-32)*5)/9);
+			if(fc == null){
+				document.write("U hebt geannuleerd.");
+			}
+			else if(fc == 0){
+				document.write("U hebt niets ingevuld.");
+			}
+			else if(isNaN(fc) == true){
+				document.write("Dit is geen getal.");
+			}
+			else{
+				return true;
+			}
+		}
+
+	</script>
+</body>
+</html>

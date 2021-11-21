@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+
+		function berekenHoeveelheid(hoeveelheid){
+			let geboortejaar = prompt("In welk jaar bent u geboren?");
+			let hoeOudDenkt = prompt("Hoe oud denkt u te worden");
+			let hoeveelKoppen = prompt("Hoeveel koppen koffie denkt u dat u per dag drinkt?");
+			if(geboortejaar == null || hoeOudDenkt == null || hoeveelKoppen == null){
+				document.write("U hebt geannuleerd.");
+			}
+			else if(geboortejaar == 0 || hoeOudDenkt == 0 || hoeveelKoppen == 0){
+				document.write("U hebt niets ingevuld.");
+			}
+			else if(isNaN(geboortejaar) == true || isNaN(hoeOudDenkt) == true || isNaN(hoeveelKoppen) == true){
+				document.write("Dit is geen getal.");
+			}
+			else{
+				let tijd = new Date();
+				let jaar = tijd.getFullYear();
+				let leeftijd = (jaar-geboortejaar);
+				let hoelangNogJaren = (hoeOudDenkt-leeftijd);
+				let hoelangNogDagen = (hoelangNogJaren*365);
+				let aantalKoppen = (hoelangNogDagen*hoeveelKoppen);
+				document.write(`<p>Je bent nu ${leeftijd}. Tegen ${hoeveelKoppen} kop(pen) koffie per dag zal je ${aantalKoppen} koppen koffie drinken als je ${hoeOudDenkt} jaar oud zal worden.</p>`);
+			}
+		}
+
+		berekenHoeveelheid();
+
+	</script>
+</body>
+</html>
